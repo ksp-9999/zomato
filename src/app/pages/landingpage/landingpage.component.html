@@ -1,0 +1,97 @@
+<style>
+    /* Custom style to prevent carousel from being distorted 
+   if for some reason image doesn't load */
+    .carousel-item {
+        min-height: 280px;
+    }
+</style>
+<div class="container-lg my-3">
+    <div id="myCarousel" class="carousel slide w-100" data-bs-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner w-100" style="position: relative;height: 400px;">
+            <div class="carousel-item active w-100" data-bs-interval="2000" style="position: absolute;">
+                <img src="../../../assets/Dosa_tiffins.jpg" class="d-block w-100 img-fluid" alt="Slide 1"
+                    style="object-fit: cover;position: absolute;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Indian Tiffins</h5>
+                    <p>"In the world of Indian Tiffins, every dish is a small delight, a culinary journey that invites
+                        you to savor the taste
+                        of India's vibrant street food culture."</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="position: absolute;" data-bs-interval="2000">
+                <img src="../../../assets/coffee-3120750 copy.jpg" class="d-block w-100" alt="Slide 2"
+                    style="object-fit: cover;position: absolute;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Coffees</h5>
+                    <p>"In the world of coffee, every sip is a journey - a moment of reflection, a burst of energy, and
+                        a comforting pause in
+                        the hustle of life."</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="position: absolute;" data-bs-interval="2000">
+                <img src="../../../assets/Biryanis.png" class="d-block w-100" alt="Slide 3"
+                    style="object-fit: cover;position: absolute;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Biryanis</h5>
+                    <p>"Biryani is not just a dish; it's a celebration of flavors, a fragrant poetry of spices, and a
+                        comforting embrace that
+                        transcends borders, bringing joy to every plate it graces."</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="position: absolute;" data-bs-interval="2000">
+                <img src="../../../assets/Indian Thali.jpg" class="d-block w-100" alt="Slide 4"
+                    style="object-fit: cover;position: absolute;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Indian Thali</h5>
+                    <p>"An Indian thali is a vibrant canvas of flavors, showcasing the rich diversity of the country on
+                        a single plate."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <!-- <div class="alert alert-info mt-3">
+        Carousel caption will be hidden on smaller viewport, but become visible on medium devices (i.e. viewport width
+        &ge;768px). Change orientation of this HTML editor to see how it works.
+    </div> -->
+</div>
+<div class="container">
+    <div class="header">
+        <h3 class=" text-secondary text-center mt-3">Restaurants in Hyderabad</h3>
+    </div>
+    <!-- <div class="body d-flex justify-content-between align-content-center mt-5" >
+        <div class="card card-hover" style="width: 300px;" *ngFor="let cat of category" (click)="navigate(cat)">
+            <img src={{cat.photoUrl}} class="card-img-top img-thumbnail " alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{cat.categoryName}}</h5>
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, aliquam!</p>
+            </div>
+        </div>
+    </div> -->
+    <div class="body d-flex justify-content-between mt-5 row" >
+        <div class="card  col-3 m-2" style="width: 300px;" *ngFor="let rest of restaurantsInLocation" (click)="navigate(rest)">
+            <img src={{rest.img}} class="card-img-top img-thumbnail mt-2" alt="..." style="object-fit: contain;" style="width: 290px; height: 150px;">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{rest.name}}</h5>
+                <p class="card-text">{{rest.location}}</p>
+            </div>
+        </div>
+    </div>
+</div>
